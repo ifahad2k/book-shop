@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+}
+
+marquee{
+    margin-bottom: 2rem;
+}
+
+.pad-main {
+    padding: .5rem 1rem;
+}
+
+body {
+    background: rgba(25, 25, 27, .9) url(https://wallpaperaccess.com/full/2878886.jpg) no-repeat center/cover fixed;
+    margin: 0;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(96, 159, 92);
+}
+
+a:hover:not(.books a){
+    text-decoration: underline;
+    color: white;
+}
+
+.main-title {
+    font-size: 2.2rem;
+    text-align: center;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.main-title:hover {
+    text-shadow: 0 0 5px blue;
+    box-shadow: 0 0 5px blue;
+}
+
+.header-toggle{
+    display: none;
+    cursor: pointer;
+    background-color: rgba(25, 25, 27, 0.768);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(25, 25, 27, 0.768);
+    
+
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1.3rem;
+    padding-left: 0;
+}
+
+header a {
+    padding: .5rem 1rem;
+    border: 1px solid;
+}
+
+.login-ul li:hover {
+    background-color: rgba(17, 1, 1, 0.848);
+}
+
+.login-ul li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.search-div input {
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-size: 1.1rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.62);
+}
+
+.search-div input:focus{
+    outline: transparent;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.search-div button {
+    padding: .5rem 1rem;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: rgba(17, 1, 1, 0.848);
+}
+
+/* main styles below */
+
+main {
+    flex-grow: 1;
+}
+
+.books{
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.books a{
+    color: white;
+}
+
+.card {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 0 2px white;
+}
+
+.card-set {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    margin-bottom: 1rem;
+}
+
+.card img {
+    display: block;
+    width: 160px;
+    height: 236px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.card-title.sm{
+    font-size: 1.35rem;
+}
+
+.card-desc > * {
+    margin: 5px;
+}
+
+.card-desc :first-child{
+    font-weight: bold;
+}
+
+.card span:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Footer styles below */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    background-color: rgba(0, 0, 0, 0.595);
+}
+
+footer a {
+    padding: .3rem 0;
+}
+
+
+@media screen and (max-width: 780px) {
+    .header-toggle{
+        display: block;
+    }
+    
+    header {
+        display: none;
+        flex-direction: column;
+    }
+
+    header ul{
+        width: 100%;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    header li{
+        display: block;
+        border: 1px solid gray;
+    }
+
+    header a{
+        border: none;
+    }
+
+    .search-div {
+        padding-bottom: 1rem;
+        order: -1;
+    }
+
+    .books{
+        justify-content: center;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    body{
+        background: rgba(25, 25, 27, .9) url(https://wallpaperaccess.com/full/3847386.jpg) no-repeat center/cover fixed;
+        margin: 0;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .search-div input {
+        width: 300px;
+        margin-right: 10px;
+    }
+}
